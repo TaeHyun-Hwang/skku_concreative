@@ -12,9 +12,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
-from sklearn.naive_bayes import BernoulliNB
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.naive_bayes import GaussianNB
+
 
 
 
@@ -69,6 +69,7 @@ mnb_iris_fit = mnb_iris.fit(iris_X_train, iris_y_train)
 
 mnb_iris_predict = mnb_iris_fit.predict(iris_X_test[0].reshape([-1,4]))
 print(mnb_iris_predict)
+print(iris_y_test[0])
 
 mnb_iris_score = mnb_iris_fit.score(iris_X_test, iris_y_test)
 print("Accuracy of iris_test_set :", mnb_iris_score)
@@ -80,11 +81,10 @@ gnb_iris_fit = gnb_iris.fit(iris_X_train, iris_y_train)
 
 gnb_iris_predict = gnb_iris_fit.predict(iris_X_test[0].reshape([-1,4]))
 print(gnb_iris_predict)
+print(iris_y_test[0])
 
 gnb_iris_score = gnb_iris_fit.score(iris_X_test, iris_y_test)
 print("Accuracy of iris_test_set :", gnb_iris_score)
-
-
 
 
 
@@ -99,6 +99,7 @@ mnb_cancer_fit = mnb_cancer.fit(cancer_X_train, cancer_y_train)
 
 mnb_cancer_predict = mnb_cancer_fit.predict(cancer_X_test[0].reshape([-1,30]))
 print(mnb_cancer_predict)
+print(cancer_y_test[0])
 
 mnb_cancer_score = mnb_cancer_fit.score(cancer_X_test, cancer_y_test)
 print("Accuracy of cancer_test_set :", mnb_cancer_score)
@@ -110,11 +111,10 @@ gnb_cancer_fit = gnb_cancer.fit(cancer_X_train, cancer_y_train)
 
 gnb_cancer_predict = gnb_cancer_fit.predict(cancer_X_test[0].reshape([-1,30]))
 print(gnb_cancer_predict)
+print(cancer_y_test[0])
 
 gnb_cancer_score = gnb_cancer_fit.score(cancer_X_test, cancer_y_test)
 print("Accuracy of cancer_test_set :", gnb_cancer_score)
-
-
 
 
 
@@ -129,6 +129,7 @@ mnb_MNIST_fit = mnb_MNIST.fit(MNIST_X_train, MNIST_y_train)
 
 mnb_MNIST_predict = mnb_MNIST_fit.predict(MNIST_X_test[0].reshape([-1,784]))
 print(mnb_MNIST_predict)
+print(MNIST_y_test[0])
 
 mnb_MNIST_score = mnb_MNIST_fit.score(MNIST_X_test, MNIST_y_test)
 print("Accuracy of MNIST_test_set :", mnb_MNIST_score)
@@ -140,11 +141,10 @@ gnb_MNIST_fit = gnb_MNIST.fit(MNIST_X_train, MNIST_y_train)
 
 gnb_MNIST_predict = gnb_MNIST_fit.predict(MNIST_X_test[0].reshape([-1,784]))
 print(gnb_MNIST_predict)
+print(MNIST_y_test[0])
 
 gnb_MNIST_score = gnb_MNIST_fit.score(MNIST_X_test, MNIST_y_test)
 print("Accuracy of MNIST_test_set :", gnb_MNIST_score)
-
-
 
 
 
